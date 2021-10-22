@@ -1,0 +1,38 @@
+{% extends "base.html" %}q
+{% block content %}
+<!-- {% include 'message.html' %} -->
+<h1 class="title">
+  Extract Text
+</h1>
+<form class="form-horizontal">
+  <div class="input-group input-group-lg">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-lg"><i class="fa fa-file" onclick="getFile()"></i></span>
+    </div>
+    <input id="upfile" style='height: 0px;width: 0px; overflow:hidden;' name="file_name" type="file" accept="image/*"
+      value="upload" onchange="readURL2(this)" />
+    <input type="text" class="form-control" aria-label="Large" placeholder="Extract Text from Image"
+      aria-describedby="inputGroup-sizing-sm" id="yt_link" name="yt_link" disabled>
+    <div class="input-group-prepend">
+      <button type="submit" id="downloadimg"><span class="input-group-text"><i
+            class="fa fa-download"></i></span></button>
+    </div>
+
+  </div>
+</form>
+<div class="custom" id="div_link">
+  <a id="new_link" class="fa fa-download" href="#" download="proposed_file_name">Download</a>
+</div>
+<div>
+  <small class="danger" id="danger"></small>
+</div>
+<div class="showimg">
+  <img id="blah" alt="" src="#" />
+  <img id="blah2" alt="" src="#" />
+</div>
+<div class="col-sm-10" style="margin-top:30px; display:none;" id="textarea">
+  <button onclick="myFunction()" class="btn btn-primary">Copy TO Clipboard</button>
+  <textarea type="text" class="form-control" id="myInput"> </textarea>
+</div>
+
+{% endblock %}

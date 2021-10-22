@@ -1,0 +1,62 @@
+.custom {
+    margin-top: 50px;
+    display: none;
+}
+.custom a  {
+    font-size: 40px;
+    
+}
+.row-custom{
+    margin:100px;
+}
+.checkbox-lg .custom-control-label::before, 
+.checkbox-lg .custom-control-label::after {
+  top: .8rem;
+  width: 1.55rem;
+  height: 1.55rem;
+}
+
+.checkbox-lg .custom-control-label {
+  padding-top: px;
+  padding-left: 6px;
+}
+
+#info-text{
+  color: black;
+}
+.text {
+  visibility: hidden;
+  width:200px;
+  background-color: grey;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+#info-text:hover .text {
+  visibility: visible;
+}
+
+#div_link{
+  display: none;
+}
+#new{
+  font-size: 40px;
+}
+.navbar-item-center a{
+  text-align: center;
+  margin-left: 200px;
+}
+#danger{
+  color: red;
+  font-size: 30px;
+}
+.showimg{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  float: left;
+}

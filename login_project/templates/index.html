@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="title">
+  Flask Login Example
+</h1>
+{% if current_user.is_authenticated %}
+<h2 class="subtitle" style="font-weight:900">
+  <div class="navbar-item-center">
+    <a href="{{ url_for('main.get_audio') }}" class="navbar-item">
+      Get Audio
+    </a>
+  </div>
+  <div class="navbar-item-center">
+    <a href="{{ url_for('main.get_wifi_qr') }}" class="navbar-item">
+      Get WiFI QR
+    </a>
+  </div>
+  <div class="navbar-item-center">
+    <a href="{{ url_for('main.get_text') }}" class="navbar-item">
+      Get Text
+    </a>
+  </div>
+  <div class="navbar-item-center">
+    <a href="{{ url_for('main.get_text') }}" class="navbar-item">
+      OpenCv Operations
+    </a>
+  </div>
+</h2>
+{% endif %}
+{% endblock %}

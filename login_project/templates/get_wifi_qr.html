@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block content %}
+<!-- {% include 'message.html' %} -->
+<h1 class="title">
+    Generate QR Here
+</h1>
+<div class="container">
+    <div class="row-custom">
+        <form >
+            <div class="form-group row">
+                <label for="inputEmail3" class="col-sm-2 col-form-label">WIFI NAME</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" id="wifi_name" placeholder="SSID">
+                </div>
+                <span>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="hid" onclick="document.getElementById('hid').setAttribute('value', 
+                    document.getElementById('hid').value = true)" value=false>
+                        <label class="form-check-label" for="gridCheck1">
+                            Hidden
+                        </label>
+                    </div>
+                </span>
+            </div>
+            <div class="form-group row">
+                <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+                <div class="col-sm-8">
+                    <input type="password" class="form-control" id="password" placeholder="Password" autocomplete="off">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="inputEmail3" class="col-sm-2 col-form-label">encryption&nbsp;&nbsp;<i class="fa fa-info" id="info-text"><span class="text"> The type of security protocol on your network </span></i>
+                  </label>
+                <!-- <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="None">
+                    <label class="form-check-label" for="inlineRadio1">None</label>
+                  </div> -->
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="WPA" checked="checked">
+                    <label class="form-check-label" for="inlineRadio2"> WPA/WPA2</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="WEP" >
+                    <label class="form-check-label" for="inlineRadio3">WEP</label>
+                  </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-10" id="div_link">
+                    <div >
+                    <a id="new" class="fa fa-download" href="#" download="#"></a>
+                    </div>
+                    <img src="#" id="new_link" alt="#">
+                </div>
+                <div class="col-sm-10" id="gen">
+                    <button type="submit" id="wifi_qr" class="btn btn-primary"><i class="fa fa-download"></i></button>
+                </div>
+            </div>
+            <div>
+                <small class="danger" id="danger"></small>
+              </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

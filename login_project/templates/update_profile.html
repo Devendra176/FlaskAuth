@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="title">
+Welcome, {{ name }}!
+</h1>-
+<div class="column is-4 is-offset-4">
+    <h3 class="title">update details</h3>
+    {% include 'message.html' %}
+    <form method="POST" action="/update/profile">
+        <div class="field">
+            <div class="control">
+                <input class="input is-large" type="password" name="old_password" placeholder="Your Old password"
+                    autofocus="" required>
+            </div>
+        </div>
+
+        <div class="field">
+            <div class="control">
+                <input class="input is-large" type="password" name="new_password" placeholder="Your New Password"
+                    required>
+            </div>
+        </div>
+        <button class="button is-block is-info is-large is-fullwidth">Update</button>
+    </form>
+</div>
+</div>
+{% endblock %}

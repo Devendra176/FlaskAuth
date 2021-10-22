@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+<!-- {% include 'message.html' %} -->
+<h1 class="title">
+    Extract Audio here
+</h1>
+<form class="form-horizontal">
+  <div class="input-group input-group-lg">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-lg"><i class="fa fa-file" onclick="getFile()"></i></span>
+    </div>
+    <input id="upfile" style='height: 0px;width: 0px; overflow:hidden;' name="file_name" type="file" accept="video/*"
+      value="upload" onchange="readURL(this)" />
+    <input type="text" class="form-control" aria-label="Large" placeholder="Extract audio from video"
+      aria-describedby="inputGroup-sizing-sm" id="yt_link" name="yt_link" disabled>
+    <div class="input-group-prepend">
+      <button type="submit" id="download"><span class="input-group-text"><i class="fa fa-download"></i></span></button>
+      <!-- <span class="input-group-text" id="inputGroup-sizing-lg">Large</span> -->
+    </div>
+    <!-- <span><i class="fa fa-search"></i></span> -->
+  </div>
+</form>
+<div class="custom" id="div_link">
+  <a id="new_link" class="fa fa-download" href="#" download="proposed_file_name">Download</a>
+</div>
+<div>
+  <small class="danger" id="danger"></small>
+</div>
+
+
+{% endblock %}
