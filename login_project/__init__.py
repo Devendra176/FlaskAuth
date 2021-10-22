@@ -26,16 +26,7 @@ def create_app():
         app.config['SQLALCHEMY_POOL_SIZE'] = 20
         app.config['SQLALCHEMY_MAX_OVERFLOW'] = 100
         app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-        # app.config['SOCIAL_GOOGLE'] = {
-        #                                 'consumer_key': '978588645771-af3sl4u1n2cpmrg74gora4bjrid2180p.apps.googleusercontent.com',
-        #                                 'consumer_secret': 'UDm4N3NPyQc6ipH25ZCmxoy1'
-        #                                 }
-        # Enter your database connection details below
-        # app.config['MYSQL_HOST'] = 'localhost'
-        # app.config['MYSQL_USER'] = 'root'
-        # app.config['MYSQL_PASSWORD'] = 'root'
-        # app.config['MYSQL_DB'] = 'flasklogin'
-        # Intialize MySQL
+
         db = SQLAlchemy(app)
         db.init_app(app)
         login_manager = LoginManager()
