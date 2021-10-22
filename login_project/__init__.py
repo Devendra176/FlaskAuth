@@ -49,8 +49,8 @@ def create_app():
         # crsr = conn.cursor()
         oauth.register(
                 name = 'google',
-                client_id = '978588645771-af3sl4u1n2cpmrg74gora4bjrid2180p.apps.googleusercontent.com',
-                client_secret = 'UDm4N3NPyQc6ipH25ZCmxoy1',
+                client_id = '',
+                client_secret = '',
                 access_token_url= 'https://accounts.google.com/o/oauth2/token',
                 access_token_params=None,
                 authorize_url ='https://accounts.google.com/o/oauth2/auth',
